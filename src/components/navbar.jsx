@@ -12,7 +12,7 @@ const NavBar = ({ totalCounters }) => {
                 class="navbar-brand"
                 href="#"
             >
-                Navbar{''} <span className="badge-pill badge-secondary">{totalCounters}</span>
+                Navbar <span className="badge-pill badge-secondary">{totalCounters}</span>
             </a>
         </div>
     </nav>
