@@ -11,7 +11,6 @@ class NavBar extends Component {
                 >
                     <a
                         class="navbar-brand"
-                        href="#"
                     >
                         Navbar
                     </a>
