@@ -7,6 +7,11 @@ class Counter extends Component {
         imageUrl: 'https://picsum.photos/200'
     };
 
+    // constructor() {
+    //     super();
+    //     this. handleIncrement = this.handleIncrement.bind(this);
+    // }
+
     styles = {
         fontSize: 10,
         fontWeight: 'normal',
@@ -20,14 +25,15 @@ class Counter extends Component {
         </ul>
     }
 
-    handleIncrement() {
-        console.log('Increment Clicked');
+    handleIncrement = product => {
+        console.log(product);
+        this.setState({ count: this.state.count + 1 });
     }
 
     render() {
         let classes = this.getBadgeClasses();
         return (
-            <React.Fragment>
+            <div>
                 <span
                     style={this.styles}
                     className={classes}
@@ -36,7 +42,7 @@ class Counter extends Component {
 
                 </span>
                 <button
-                    onClick={this.handleIncrement}
+                    onClick={() => this.handleIncrement()}
                     className="btn btn-secondary btn-sm"
                 >
                     Increment
@@ -45,7 +51,7 @@ class Counter extends Component {
                     {this.state.tags.length === 0 && 'Please create a new tag!'}
                     {this.renderTags()}
                 </div>
-            </React.Fragment>
+            </div>
         );
     }
 
