@@ -11,8 +11,9 @@ class NavBar extends Component {
                 >
                     <a
                         class="navbar-brand"
+                        href="#"
                     >
-                        Navbar
+                        Navbar <span className="badge-pill badge-secondary">{this.props.totalCounters}</span>
                     </a>
                 </div>
             </nav>
