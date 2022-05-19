@@ -25,8 +25,7 @@ class Counter extends Component {
         </ul>
     }
 
-    handleIncrement = product => {
-        console.log(product);
+    handleIncrement = () => {
         this.setState({ value: this.state.value + 1 });
     }
 
@@ -35,7 +34,6 @@ class Counter extends Component {
         return (
             <React.Fragment>
                 <div>
-                    {this.props.children}
                     <span
                         style={this.styles}
                         className={classes}
@@ -48,6 +46,12 @@ class Counter extends Component {
                         className="btn btn-secondary btn-sm"
                     >
                         Increment
+                    </button>
+                    <button
+                        onClick={this.handleDelete}
+                        className="btn btn-danger btn-sm m-2"
+                    >
+                        Delete
                     </button>
                 </div>
                 <div>
